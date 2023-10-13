@@ -1,62 +1,13 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
-  </body>
-</html> -->
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Todo List with Vue.js and JSON</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-  </head>
-
-  <body>
-    <div id="app" class="container mt-5">
-      <h1>Todo List</h1>
-      <todo-input @add-task="addTask"></todo-input>
-      <todo-list
-        :todos="todos"
-        @delete-task="deleteTask"
-        @edit-task="editTask"
-      ></todo-list>
-    </div>
-
-    <script src="./path_to_your_vue_components/TodoInput.vue"></script>
-    <script src="./path_to_your_vue_components/TodoList.vue"></script>
-    <script>
-      new Vue({
-        el: "#app",
-        data: {
-          todos: [],
-        },
-        created() {
-          // Your fetch from the JSON file can be added here
-        },
-        methods: {
-          addTask(task) {
-            this.todos.push(task);
-          },
-          deleteTask(index) {
-            this.todos.splice(index, 1);
-          },
-          editTask(index) {
-            // Your edit functionality can be added here
-          },
-        },
-      });
-    </script>
   </body>
 </html>
