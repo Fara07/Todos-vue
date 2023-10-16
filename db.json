@@ -1,10 +1,6 @@
 {
   "data": [
     {
-      "id": 1,
-      "name": "SARVARCHIK"
-    },
-    {
       "id": 2,
       "name": "Akmal"
     },
@@ -25,8 +21,12 @@
       "id": 6
     },
     {
-      "name": "Salllllom",
+      "name": "qaleeeee",
       "id": 7
+    },
+    {
+      "name": "sss",
+      "id": 8
     }
   ]
 }

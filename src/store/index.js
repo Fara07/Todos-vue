@@ -35,14 +35,15 @@ export let store = createStore({
       let value = prompt("");
 
       if (value === null) return;
-      console.log(value);
 
-      await axios.put(`http://localhost:3004/data/${action.id}`, {
-        ...action,
-        name: value,
-      });
+     if(value !== ""){
+       await axios.put(`http://localhost:3004/data/${action.id}`, {
+         ...action,
+         name: value,
+       });
 
-      context.dispatch("fetchData");
+       context.dispatch("fetchData");
+     }
     },
   },
 });

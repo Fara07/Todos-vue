@@ -1,22 +1,17 @@
 <script setup>
-import ListsAdd from "./components/ListsAdd.vue";
-import Lists from "./components/Lists.vue";
+import Lists from "@/components/Lists.vue";
+import ListsAdd from "@/components/ListsAdd.vue";
 </script>
 
 <template>
-  <div
-    style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    "
-  >
+  <div style="display: flex; align-items: center; justify-content: center">
     <div>
-      <ListsAdd />
-      <Lists />
+      <ListsAdd/>
+      <Lists/>
     </div>
   </div>
+
+<!--  <router-view></router-view>-->
 </template>
 
 <style scoped></style>
