@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "SARVARCHIK"
+    },
+    {
+      "id": 2,
+      "name": "Akmal"
+    },
+    {
+      "id": 3,
+      "name": "Bobur"
+    },
+    {
+      "id": 4,
+      "name": "Jasur"
+    },
+    {
+      "name": "salom",
+      "id": 5
+    },
+    {
+      "name": "qalesan",
+      "id": 6
+    },
+    {
+      "name": "Salllllom",
+      "id": 7
+    }
+  ]
+}
