@@ -1,10 +1,12 @@
 <script setup>
 import { useStore } from "vuex";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
 let store = useStore();
+const route = useRoute();
 
 onMounted(() => {
-  store.dispatch("fetchData");
+  store.dispatch("fetchData", route);
 });
 </script>
 

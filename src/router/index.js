@@ -3,20 +3,20 @@ import Boards from "../components/Boards.vue";
 import ListsAdd from "../components/ListsAdd.vue";
 
 let router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
 
-    routes: [
+  routes: [
+    {
+      path: "/",
+      component: Boards,
+      children: [
         {
-            path: "/",
-            component: Boards,
-            children: [
-                {
-                    path: "/two",
-                    component: ListsAdd,
-                }
-            ]
+          path: "/:id",
+          component: ListsAdd,
         },
-    ],
+      ],
+    },
+  ],
 });
 
 export default router;

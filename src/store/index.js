@@ -4,11 +4,12 @@ import axios from "axios";
 export let store = createStore({
   state: { data: [], isLoading: false, isError: false },
   actions: {
-    async fetchData(context) {
+    async fetchData(context, action) {
       context.state.isLoading = true;
-
       try {
-        let response = await axios.get("http://localhost:3004/data");
+        let response = await axios.get(
+          `http://localhost:3004/data?boardId=${action.params.id}`,
+        );
         context.state.data = response.data;
       } catch (error) {
         alert(error);
@@ -17,9 +18,10 @@ export let store = createStore({
       }
     },
 
-    async NewTask(context, action) {
+    async NewTask(context, action, route) {
       await axios.post("http://localhost:3004/data", {
         name: action,
+        boardId: route.params.id,
       });
 
       context.dispatch("fetchData");
@@ -36,14 +38,14 @@ export let store = createStore({
 
       if (value === null) return;
 
-     if(value !== ""){
-       await axios.put(`http://localhost:3004/data/${action.id}`, {
-         ...action,
-         name: value,
-       });
+      if (value !== "") {
+        await axios.put(`http://localhost:3004/data/${action.id}`, {
+          ...action,
+          name: value,
+        });
 
-       context.dispatch("fetchData");
-     }
+        context.dispatch("fetchData", action.boardId);
+      }
     },
   },
 });

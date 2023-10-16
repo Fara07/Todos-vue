@@ -1,32 +1,52 @@
 {
+  "boards": [
+    {
+      "id": 1,
+      "title": "Board 1"
+    },
+    {
+      "id": 2,
+      "title": "Board 2"
+    },
+    {
+      "id": 3,
+      "title": "Board 3"
+    },
+    {
+      "id": 4,
+      "title": "Board 4"
+    }
+  ],
   "data": [
     {
       "id": 2,
+      "boardId": 1,
       "name": "Akmal"
     },
     {
       "id": 3,
+      "boardId": 1,
       "name": "Bobur"
     },
     {
-      "id": 4,
-      "name": "Jasur"
+      "id": 5,
+      "boardId": 2,
+      "name": "salom"
     },
     {
-      "name": "salom",
-      "id": 5
-    },
-    {
-      "name": "qalesan",
-      "id": 6
+      "id": 6,
+      "boardId": 3,
+      "name": "farxod aka"
     },
     {
       "name": "qaleeeee",
-      "id": 7
+      "id": 7,
+      "boardId": 4
     },
     {
       "name": "sss",
-      "id": 8
+      "id": 8,
+      "boardId": 4
     }
   ]
 }
